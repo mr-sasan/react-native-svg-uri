@@ -10,18 +10,6 @@ This was tested with RN 0.33 and react-native-svg 4.3.1 (depends on this library
 Not all the svgs can be rendered, if you find problems fill an issue or a PR in
 order to contemplate all the cases
 
-Install library from `npm`
-
-```bash
-npm install react-native-svg-uri --save
-```
-
-Link library react-native-svg
-
-```bash
-react-native link react-native-svg # not react-native-svg-uri !!!
-```
-
 ## Props
 
 | Prop | Type | Default | Note |
