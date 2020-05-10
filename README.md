@@ -25,6 +25,7 @@ react-native link react-native-svg # not react-native-svg-uri !!!
 | Prop | Type | Default | Note |
 |---|---|---|---|
 | `source` | `ImageSource` |  | Same kind of `source` prop that `<Image />` component has
+| `source.option` | `Object` |  | pass the object for fetch request, you can put method: 'POST' or 'GET' or header and etc...
 | `svgXmlData` | `String` |  | You can pass the SVG as String directly
 | `fill` | `Color` |  | Overrides all fill attributes of the svg file
 | `fillAll` | `Boolean` |  Adds the fill color to the entire svg object
@@ -47,7 +48,14 @@ const TestSvgUri = () => (
     <SvgUri
       width="200"
       height="200"
-      source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg'}}
+      source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg', 
+      options: {
+        method: 'GET',
+        headers: {
+          Authorization: 'Barren ' + this.state.token,
+        },
+      }
+      }}
     />
   </View>
 );
